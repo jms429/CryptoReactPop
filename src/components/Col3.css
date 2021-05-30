@@ -1,0 +1,184 @@
+.col-3{
+    background: var(--col3);
+    border-radius: 0 18px 18px 0;
+    padding: 25px 15px;
+    display: grid;
+    /* grid-template-rows: 1fr 4fr 2fr;   */
+  }
+
+  /* .box{
+    width: 130px;
+    height: 150px;
+    margin: 2px;
+  } */
+
+  /* **************col-3************** */
+
+.user{
+    /*   background: coral; */
+      display: flex;
+    }
+    
+    .user #notifications{
+      height: 35px;
+      width: 35px;
+      background: white;
+      border-radius: 50%;
+    }
+    
+    #notifications a i {
+      color: var(--chart2);
+      padding: 9px 0 0 10px;
+      font-weight: 600;
+    }
+    
+    #notifications a i i{
+      color: red;
+      font-size: 5px;
+      margin: -7px;
+    }
+    
+    #notifications .dropdown{
+      background: #fff;
+      width: 170px;
+      height: 350px;
+      padding: 1px;
+      margin: 40px -32px;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    
+    #notifications .dropdown li{
+      padding:5px;
+    }
+    
+    #notifications .dropdown li:hover{
+      background: var(--col3);
+    }
+    
+    #notifications .dropdown li p{
+      font-size: 8px;
+      margin: 1px 0 0 40px;
+    }
+    
+    #user{
+      height: 35px;
+      width: 35px;
+      background: white;
+      /* border: 2px solid var(--chart2); */
+      border-radius: 50%;
+      margin-left: auto;
+      position: relative;
+    }
+    
+    #user img{
+      width: 35px;
+      border-radius: 50%;
+    }
+    
+    #notifications:hover .dropdown, #user:hover .dropdown{
+      display: inline-block;
+    }
+    
+    
+    #user i{
+      display: none;
+       color: var(--chart2);
+      padding: 9px 0 0 11px;
+    }
+    
+    .dropdown{
+     display: none;
+     position: absolute;
+    }
+    
+    .dropdown li{
+      margin: 5px;
+      padding: 0;
+    }
+    
+    #user .dropdown li a i{
+      padding: 0;
+      margin: 2px
+    }
+    
+    #user .dropdown{
+      background: #fff;
+      width: 100px;
+      height: 50px;
+      padding: 1px;
+      margin: 40px -100px;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    
+    .recent h5{
+      font-size: 12px;
+      margin: 0 0 18px 0
+    }
+    
+    .recent ul, .top ul{
+      padding: 0;
+    }
+    
+    .recent  ul  li, .top ul li{
+      display: flex;
+      font-size: 7.5px;
+      font-weight: 700;
+      margin: 12px 0;
+    }
+    
+    .transactPhoto{
+      background: #fff;
+      width:25px;
+      height: 25px;
+      border-radius: 50%;
+      margin: 0 10px 0 0;
+    }
+    
+    .transactPhoto img{
+      border-radius: 50%;
+    }
+    
+    .transactPhoto h2{
+      margin: 6px;
+    }
+    
+    .transactName p {
+      font-size: 7px;
+      font-weight: 500;
+      margin-top: 10%;
+    }
+    
+    .transactAmt{
+      margin-left: auto;
+      color: var(--chart2)
+    }
+    
+    .negative{
+      color: var(--chart1);
+    }
+    
+    .pagination{
+      width: 30px;
+      height: 10px;
+      margin: 12px auto;
+      display: flex;
+    }
+    
+    .pagination div{
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: lightblue;
+      margin: auto;
+    }
+    
+    .pagination .active{
+      background: blue;
+    }
+    
+    .top{
+      border-top: 3px solid #fff;
+      padding-top: 15px;
+    }

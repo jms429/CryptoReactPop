@@ -1,0 +1,149 @@
+.col-2{
+    background: var(--col2);
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 15px;
+    scroll-behavior: smooth;
+  }
+
+/* **************col-2************** */
+
+.header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  
+  .title{
+    font-size: larger;
+    font-weight: 700;
+  }
+  
+  .search{
+    background: #fff;
+    width: 220px;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 20px auto;
+    align-items: center;
+    border-radius: 5px;
+      box-shadow: 4px 12px 12px -6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 4px 6px 12px -6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search i{
+    padding:5px;
+  }
+  input{
+    margin: 5px;
+    outline: none;
+    border: none;
+  }
+
+  .orange{
+    color: var(--chart1);
+  }
+
+  .blue{
+    color: var(--chart2);
+  }
+  
+  .chartBoard{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    margin: 15px 0;
+    grid-template-rows: 25px auto;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  .chartTitle, .date{
+    font-size: 12px;
+    font-weight: 900;
+  }
+  
+  .coin{
+    text-align: end;
+  }
+
+  .coin button{
+    background: none;
+    border: none;
+  }
+  
+  .price h2{
+    margin: 2px;
+  }
+
+  .price h2 i{
+    font-size: 15px;
+  }
+  
+  .index{
+    font-size: 8px;
+    font-weight: bold;
+    padding: 0 4px;
+  }
+  
+  .index i{
+    color: var(--text-highlight);
+  }
+  
+  .chartKey{
+    font-size: 10px;
+    font-weight: 600;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .chartKey i{
+    color: var(--chart1);
+    padding: 0 5px;
+  }
+  
+  .key1{
+    margin: 85px 0 2px 0;
+  }
+  .key2 i{
+    color: var(--chart2);
+  }
+  
+  
+  .summaryBoard h3{
+    font-size: small;
+    font-weight: 900;
+  }
+  
+  .summaryBoard p{
+    font-size: 8px;
+    margin: 0;
+    color: var(--text-light);
+  }
+  
+  .summaryCharts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 10px;
+  }
+  
+  .charts1{
+    background-color: var(--chart2);
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+  }
+  .charts2{
+    background-color: var(--chart1);
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+  }
+  .charts3{
+    background-color: var(--chart3);
+    width: 200px;
+    height: 130px;
+    border-radius: 10px;
+  }
