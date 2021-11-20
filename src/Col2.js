@@ -1,28 +1,53 @@
 import React, { useState, useEffect } from 'react'
 import './components/Col2.css';
 import Chart from './Chart'
+import axios from 'axios'
+
 
 
 const Col2 = () => {
-  const [data, setData] = useState([])
-  const fetchURL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum-classic&order=market_cap_desc&per_page=100&page=1&sparkline=true"
-  const getData = () =>
-    fetch(`${fetchURL}`)
+  const [priceData, setpriceData] = useState([])
+  const [popData, setpopData] = useState([])
+  const priceURL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum-classic&order=market_cap_desc&per_page=100&page=1&sparkline=true"
+  const popularityURL = "https://api.lunarcrush.com/v2?data=assets&key=ohn8lh0mi3aor1y5r0ve&symbol=ETC&data_points=168&time_series_indicators=social_score"
+  //coinbase provides 'every hour' data for one week which is 168 data points
+  // lunarcrush unix time math get the unix time then minus 604800 for one week ago
+  
+  const getPriceData = () =>
+    fetch(`${priceURL}`)
       .then((res) => res.json())
+        .catch((error) =>{
+          console.log(error)
+      })
+
+  const getPopData = () =>
+      fetch(`${popularityURL}`)
+        .then((res) => res.json())
+          .catch((error) =>{
+            console.log(error)
+        })
+
+  
   useEffect(() => {
-    
-    getData().then((data) => setData(data))
+    getPriceData().then((priceData) => setpriceData(priceData))
+    getPopData().then((popData) => setpopData(popData))
   }, [])
 
   function reload() {
     window.location.reload(false);
   }
-  
+  let array = []
 
+    // for(let i=0;i < 169; i++){
+    //   array.push(popData.data[0].timeSeries[i].social_score)
+    // }
+
+  console.log(array)
+  console.log(priceData)
   return (
-
+    
     <div class="col-2">
-      {data.map((item) =>
+      {priceData.map((item) =>
         <div>
           <div class="header">
             <div class="title">Dashboard</div>
@@ -42,7 +67,7 @@ const Col2 = () => {
                 <p class="key2"><i class="fas fa-circle"></i>Price</p>
               </div>
             </div>
-            <div class="chart"><Chart datablock={item.sparkline_in_7d.price} /></div>
+            <div class="chart"><Chart datablock={item.sparkline_in_7d.price} poparray={array} /></div>
           </div>
           <div class="summaryBoard">
             <h3>Your Store Summary<p>Latest Orders for Today</p>
