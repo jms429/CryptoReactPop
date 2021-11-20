@@ -10,6 +10,7 @@ const Col2 = () => {
     fetch(`${fetchURL}`)
       .then((res) => res.json())
   useEffect(() => {
+    
     getData().then((data) => setData(data))
   }, [])
 
